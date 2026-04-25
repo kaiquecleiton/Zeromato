@@ -3,148 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Portão Pro | Automatização e Segurança</title>
+    <title>Portão Pro | Segurança e Automatização</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
         
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #0f172a; 
-            color: #f1f5f9; 
-        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0f172a; color: #f8fafc; }
 
-        /* Estilo Industrial - Menos brilho, mais solidez */
-        .header-solid { 
-            background: #1e293b; 
-            border-bottom: 3px solid #eab308; 
+        /* Estilo Executivo Premium */
+        .glass-dark { 
+            background: rgba(30, 41, 59, 0.7); 
+            backdrop-filter: blur(16px); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
         }
         
-        .btn-industrial {
-            background: #eab308;
-            color: #000;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 4px solid #a16207;
-            transition: all 0.2s;
+        .btn-action {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease;
         }
-        .btn-industrial:active {
-            border-bottom-width: 0;
-            transform: translateY(4px);
-        }
-
-        .card-iron {
-            background: #1e293b;
-            border-left: 4px solid #eab308;
-            box-shadow: 10px 10px 0px rgba(0,0,0,0.2);
-        }
+        .btn-action:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6); }
 
         .no-break { white-space: nowrap; }
 
-        /* Textura de fundo sutil para parecer metal/oficina */
-        .bg-pattern {
-            background-image: radial-gradient(#334155 0.5px, transparent 0.5px);
-            background-size: 20px 20px;
+        .card-pro {
+            background: #1e293b;
+            border-bottom: 4px solid #3b82f6;
+            transition: 0.3s;
         }
+        .card-pro:hover { background: #334155; }
     </style>
 </head>
-<body class="antialiased bg-pattern">
+<body class="antialiased">
 
-    <header class="fixed w-full z-50 header-solid py-4 px-6 flex justify-between items-center">
-        <div class="text-xl font-black tracking-tighter flex items-center gap-2">
-            <i class="fas fa-border-all text-amber-500"></i>
-            PORTÃO<span class="text-amber-500">PRO</span>
+    <header class="fixed w-full z-50 glass-dark py-4 px-6 md:px-12 flex justify-between items-center border-b border-white/5">
+        <div class="text-xl md:text-2xl font-extrabold tracking-tighter flex items-center gap-2">
+            <i class="fas fa-shield-alt text-blue-500"></i>
+            PORTÃO<span class="text-blue-500">PRO</span>
         </div>
-        
-        <a href="https://wa.me/seunumeroaqui" class="btn-industrial px-4 py-2 rounded text-[12px] no-break">
-            Orçamento Urgente
+        <a href="https://wa.me/seunumeroaqui" class="btn-action text-white px-5 py-2 rounded-lg font-bold text-xs no-break uppercase tracking-wider">
+            Orçamento Express
         </a>
     </header>
 
     <section class="relative pt-32 pb-12 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div data-aos="fade-right">
-                <span class="bg-amber-500 text-black font-black px-3 py-1 text-xs uppercase mb-4 inline-block">Especialista em Automatização</span>
-                <h1 class="text-5xl md:text-8xl font-black leading-none mb-6 tracking-tight uppercase">
-                    Segurança <br><span class="text-amber-500">Sem Falhas.</span>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 py-1 px-3 rounded-full mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+                    <span class="text-blue-400 text-[10px] font-bold uppercase tracking-widest">Técnicos de Plantão</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-7xl font-extrabold leading-[1.1] mb-6">
+                    Seu Portão <br><span class="text-blue-500">Inteligente e Rápido.</span>
                 </h1>
                 
-                <p class="text-slate-400 text-lg mb-8 max-w-xl font-medium border-l-4 border-slate-700 pl-4">
-                    Instalação de motores rápidos e manutenção de portões eletrônicos. Não fique na mão na hora de entrar em casa.
+                <p class="text-slate-400 text-lg mb-8 max-w-lg leading-relaxed">
+                    Instalação de motores de alta velocidade e assistência técnica especializada. Segurança para sua família, agilidade para o seu dia.
                 </p>
                 
-                <div class="flex flex-col gap-4">
-                    <a href="#contato" class="btn-industrial py-5 px-10 rounded text-xl text-center md:w-max">
-                        <i class="fab fa-whatsapp mr-2"></i> Chamar no Whats
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contato" class="btn-action text-white py-4 px-10 rounded-xl font-bold text-center text-lg">
+                        CHAMAR TÉCNICO
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="servicos" class="py-12 px-6 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="card-iron p-8" data-aos="fade-up">
-                <h3 class="text-2xl font-black mb-4 uppercase">Motores Rápidos</h3>
-                <p class="text-slate-400 text-sm mb-6">Instalação de motores de alta performance que abrem seu portão em até 4 segundos.</p>
-                <i class="fas fa-bolt text-4xl text-amber-500/20 block text-right"></i>
-            </div>
-
-            <div class="card-iron p-8" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-2xl font-black mb-4 uppercase">Manutenção</h3>
-                <p class="text-slate-400 text-sm mb-6">Troca de cabos de aço, roldanas, placas e ajustes em portões basculantes e deslizantes.</p>
-                <i class="fas fa-wrench text-4xl text-amber-500/20 block text-right"></i>
-            </div>
-
-            <div class="card-iron p-8" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-2xl font-black mb-4 uppercase">Segurança</h3>
-                <p class="text-slate-400 text-sm mb-6">Travas elétricas, sensores anti-esmagamento e configuração de novos controles.</p>
-                <i class="fas fa-shield-alt text-4xl text-amber-500/20 block text-right"></i>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato" class="py-16 px-6">
-        <div class="max-w-4xl mx-auto bg-slate-800 p-8 md:p-12 border-2 border-slate-700 relative">
-            <div class="absolute -top-3 -left-3 bg-amber-500 w-10 h-10 flex items-center justify-center">
-                <i class="fas fa-clipboard-list text-black"></i>
-            </div>
-
-            <h2 class="text-3xl font-black mb-8 uppercase tracking-tighter">Solicitar Ordem de Serviço</h2>
-            
-            <form class="grid md:grid-cols-2 gap-6">
-                <div class="space-y-4">
-                    <div>
-                        <label class="text-xs font-black uppercase text-amber-500">Seu Nome</label>
-                        <input type="text" class="w-full bg-slate-900 border-b-2 border-slate-700 p-3 outline-none focus:border-amber-500 transition text-white">
-                    </div>
-                    <div>
-                        <label class="text-xs font-black uppercase text-amber-500">WhatsApp</label>
-                        <input type="tel" class="w-full bg-slate-900 border-b-2 border-slate-700 p-3 outline-none focus:border-amber-500 transition text-white">
+            <div class="hidden md:block relative" data-aos="zoom-in">
+                <div class="w-full h-80 bg-gradient-to-br from-blue-600 to-blue-900 rounded-[2rem] overflow-hidden shadow-2xl flex items-center justify-center border-4 border-white/5">
+                    <i class="fas fa-gears text-white/10 text-[15rem] absolute"></i>
+                    <div class="relative text-center p-8">
+                        <p class="text-5xl font-black text-white mb-2">PPA / ROSSI</p>
+                        <p class="text-blue-200 font-bold tracking-widest uppercase">As melhores marcas</p>
                     </div>
                 </div>
-                <div class="space-y-4">
-                    <div>
-                        <label class="text-xs font-black uppercase text-amber-500">O que está acontecendo?</label>
-                        <textarea rows="4" class="w-full bg-slate-900 border-b-2 border-slate-700 p-3 outline-none focus:border-amber-500 transition text-white" placeholder="Ex: Portão não abre, motor barulhento..."></textarea>
-                    </div>
-                    <button class="btn-industrial w-full py-4">Enviar Agora</button>
-                </div>
-            </form>
+            </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-slate-800 px-6 text-center">
-        <div class="font-black text-2xl mb-4">PORTÃO<span class="text-amber-500">PRO</span></div>
-        <p class="text-slate-500 text-xs">Atendimento em toda a região. Técnico certificado.</p>
+    <section class="py-12 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card-pro p-8 rounded-2xl" data-aos="fade-up">
+                <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-bolt"></i></div>
+                <h3 class="text-xl font-bold mb-2">Motores Hi-Speed</h3>
+                <p class="text-slate-400 text-sm">Abra seu portão em menos de 5 segundos e evite esperas na rua.</p>
+            </div>
+
+            <div class="card-pro p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-tools"></i></div>
+                <h3 class="text-xl font-bold mb-2">Manutenção Geral</h3>
+                <p class="text-slate-400 text-sm">Reparo em placas, troca de roldanas, cabos e trilhos com garantia.</p>
+            </div>
+
+            <div class="card-pro p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-mobile-alt"></i></div>
+                <h3 class="text-xl font-bold mb-2">Acesso por Celular</h3>
+                <p class="text-slate-400 text-sm">Controle seu portão de qualquer lugar do mundo via Wi-Fi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-16 px-6 bg-slate-900/50">
+        <div class="max-w-xl mx-auto text-center mb-10">
+            <h2 class="text-3xl font-bold mb-4">Orçamento Grátis</h2>
+            <p class="text-slate-400">Preencha e entraremos em contato em poucos minutos.</p>
+        </div>
+        
+        <form class="max-w-lg mx-auto space-y-4 bg-slate-800 p-8 rounded-3xl shadow-xl">
+            <input type="text" placeholder="Nome completo" class="w-full bg-slate-900 border border-white/5 rounded-xl p-4 outline-none focus:ring-2 focus:ring-blue-500 text-white transition">
+            <input type="tel" placeholder="WhatsApp" class="w-full bg-slate-900 border border-white/5 rounded-xl p-4 outline-none focus:ring-2 focus:ring-blue-500 text-white transition">
+            <textarea placeholder="Como posso ajudar?" rows="3" class="w-full bg-slate-900 border border-white/5 rounded-xl p-4 outline-none focus:ring-2 focus:ring-blue-500 text-white transition"></textarea>
+            <button class="btn-action w-full py-4 rounded-xl text-white font-black uppercase tracking-widest transition">ENVIAR AGORA</button>
+        </form>
+    </section>
+
+    <footer class="py-12 text-center text-slate-500 text-xs">
+        <p class="font-bold text-blue-500 mb-2 tracking-widest uppercase">Portão Pro Especialista</p>
+        <p>© 2026 Atendimento Residencial e Comercial.</p>
     </footer>
 
-    <a href="https://wa.me/seunumeroaqui" class="fixed bottom-6 right-6 bg-[#25d366] w-16 h-16 rounded shadow-xl flex items-center justify-center text-3xl z-50 hover:scale-110 transition">
+    <a href="https://wa.me/seunumeroaqui" class="fixed bottom-6 right-6 bg-[#25d366] w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl z-50 transition hover:scale-110">
         <i class="fab fa-whatsapp text-white"></i>
     </a>
 
