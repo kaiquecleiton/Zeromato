@@ -3,117 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eletricista Profissional | Serviços Rápidos e Seguros</title>
+    <title>Eletricista Premium | Soluções de Alta Performance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Estilos Gerais */
         :root {
-            --primary: #f1c40f; /* Amarelo Elétrico */
-            --secondary: #2c3e50; /* Azul Escuro Profissional */
-            --dark: #1a1a1a;
-            --light: #f4f4f4;
-            --white: #ffffff;
+            --primary: #FFD700; /* Ouro/Amarelo Vibrante */
+            --primary-glow: rgba(255, 215, 0, 0.4);
+            --bg-dark: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { line-height: 1.6; color: var(--dark); background-color: var(--light); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
 
-        /* Cabeçalho */
-        header { background: var(--secondary); color: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
-        nav a { color: var(--white); text-decoration: none; margin-left: 20px; font-weight: 500; }
+        body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+
+        /* Background Decorativo */
+        body::before {
+            content: ""; position: fixed; top: -10%; right: -10%; width: 500px; height: 500px;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+            z-index: -1; opacity: 0.3;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 8%; display: flex; justify-content: space-between; align-items: center;
+            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+
+        nav a { color: var(--text-main); text-decoration: none; margin-left: 30px; font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
         nav a:hover { color: var(--primary); }
 
         /* Hero Section */
-        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); 
-                height: 80vh; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding: 0 20px; }
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; }
-        .btn { background: var(--primary); color: var(--dark); padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
-        .btn:hover { background: var(--white); transform: scale(1.05); }
+        .hero {
+            height: 90vh; display: flex; align-items: center; padding: 0 8%;
+            background: linear-gradient(90deg, var(--bg-dark) 40%, transparent 100%), 
+                        url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2070') center/cover;
+        }
+        .hero-content { max-width: 700px; }
+        .hero-content h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+        .hero-content p { font-size: 1.2rem; color: var(--text-dim); margin-bottom: 35px; }
 
-        /* Serviços */
-        .services { padding: 4rem 5%; text-align: center; }
-        .services h2 { margin-bottom: 3rem; font-size: 2.5rem; color: var(--secondary); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { background: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-bottom: 5px solid var(--primary); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .card h3 { margin-bottom: 15px; color: var(--secondary); }
+        /* Buttons */
+        .btn-primary {
+            background: var(--primary); color: #000; padding: 18px 35px; border-radius: 12px;
+            text-decoration: none; font-weight: 800; display: inline-block;
+            box-shadow: 0 10px 20px var(--primary-glow); transition: 0.4s;
+        }
+        .btn-primary:hover { transform: translateY(-5px); box-shadow: 0 15px 30px var(--primary-glow); background: #fff; }
 
-        /* Contato / Formulário */
-        .contact { padding: 4rem 5%; background: var(--secondary); color: var(--white); }
-        .contact-container { max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        form { display: flex; flex-direction: column; }
-        input, textarea { padding: 12px; margin-bottom: 15px; border-radius: 5px; border: none; }
-        button { background: var(--primary); color: var(--dark); border: none; padding: 15px; font-weight: bold; cursor: pointer; border-radius: 5px; }
+        /* Seção Serviços (Cards Modernos) */
+        .services { padding: 100px 8%; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .section-title span { color: var(--primary); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; font-weight: 700; }
 
-        /* Footer */
-        footer { text-align: center; padding: 2rem; background: var(--dark); color: #888; font-size: 0.9rem; }
+        .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card {
+            background: var(--bg-card); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);
+            backdrop-filter: blur(12px); transition: 0.3s; position: relative; overflow: hidden;
+        }
+        .card::after {
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,215,0,0.05)); opacity: 0; transition: 0.3s;
+        }
+        .card:hover { transform: scale(1.03); border-color: var(--primary); }
+        .card:hover::after { opacity: 1; }
+        .card-icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+        .card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+        .card p { color: var(--text-dim); font-size: 0.95rem; }
 
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .contact-container { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2rem; }
+        /* Formulário Ultra Moderno */
+        .contact { padding: 100px 8%; background: rgba(255,215,0,0.02); }
+        .contact-box {
+            max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr;
+            background: var(--bg-card); border-radius: 30px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+        .contact-info { padding: 60px; background: var(--primary); color: #000; }
+        .contact-form { padding: 60px; background: #1e293b; }
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 15px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #334155;
+            background: #0f172a; color: white; outline: none;
+        }
+        .contact-form input:focus { border-color: var(--primary); }
+
+        footer { text-align: center; padding: 50px; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-dim); }
+
+        @media (max-width: 900px) {
+            .hero { text-align: center; justify-content: center; background: var(--bg-dark); }
+            .contact-box { grid-template-columns: 1fr; }
+            nav { display: none; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">⚡ ELETRICISTA PRO</div>
+        <div class="logo"><span>⚡</span> ELETRICISTA PRO</div>
         <nav>
+            <a href="#home">Início</a>
             <a href="#servicos">Serviços</a>
-            <a href="#contato">Orçamento</a>
+            <a href="#contato">Orçamentos</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Energia com Segurança e Confiança</h1>
-        <p>Instalações, manutenções e reparos elétricos residenciais e comerciais com garantia e rapidez.</p>
-        <a href="#contato" class="btn">SOLICITAR ORÇAMENTO AGORA</a>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Energia com <br><span style="color:var(--primary)">Segurança e Estilo.</span></h1>
+            <p>Especialista em instalações modernas, automação residencial e reparos críticos com certificação técnica e acabamento premium.</p>
+            <a href="#contato" class="btn-primary">SOLICITAR ORÇAMENTO AGORA</a>
+        </div>
     </section>
 
     <section id="servicos" class="services">
-        <h2>Meus Serviços</h2>
-        <div class="grid">
+        <div class="section-title">
+            <span>O que eu faço</span>
+            <h2>Serviços Especializados</h2>
+        </div>
+        <div class="grid-services">
             <div class="card">
-                <h3>Instalações Elétricas</h3>
-                <p>Montagem de quadros de energia, fiação completa e novos pontos de luz.</p>
+                <span class="card-icon">🏗️</span>
+                <h3>Infraestrutura</h3>
+                <p>Montagem de quadros de comando e fiação estruturada para residências de alto padrão.</p>
             </div>
             <div class="card">
-                <h3>Manutenção Preventiva</h3>
-                <p>Check-up completo da rede para evitar curtos e reduzir a conta de luz.</p>
+                <span class="card-icon">📱</span>
+                <h3>Smart Home</h3>
+                <p>Automação completa: controle luzes, tomadas e persianas pelo celular ou Alexa.</p>
             </div>
             <div class="card">
-                <h3>Reparos de Emergência</h3>
-                <p>Atendimento rápido para falta de energia, disjuntores caindo ou fiação queimada.</p>
-            </div>
-            <div class="card">
-                <h3>Automação e Tomadas</h3>
-                <p>Instalação de tomadas inteligentes, sensores de presença e luminárias LED.</p>
+                <span class="card-icon">🛡️</span>
+                <h3>Manutenção</h3>
+                <p>Laudos técnicos e revisão preventiva para garantir que sua rede nunca te deixe na mão.</p>
             </div>
         </div>
     </section>
 
     <section id="contato" class="contact">
-        <div class="contact-container">
-            <div>
-                <h2>Fale Comigo</h2>
-                <p style="margin-bottom: 20px;">Precisa de um orçamento detalhado? Preencha o formulário ou entre em contato pelo telefone abaixo.</p>
-                <p><strong>Telefone:</strong> (11) 99999-9999</p>
-                <p><strong>Atendimento:</strong> Seg a Sex, das 08h às 18h</p>
+        <div class="contact-box">
+            <div class="contact-info">
+                <h2 style="font-size: 2rem; margin-bottom: 20px;">Vamos conversar?</h2>
+                <p style="font-weight: 500; margin-bottom: 40px;">Deixe seus dados e eu entrarei em contato em menos de 1 hora.</p>
+                <p><strong>📍 Atendimento:</strong> São Paulo e Grande SP</p>
+                <p><strong>📞 WhatsApp:</strong> (11) 99999-9999</p>
+                <p style="margin-top: 40px; font-size: 0.8rem; text-transform: uppercase;">Aberto agora: 08:00 - 20:00</p>
             </div>
-            <form>
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu E-mail" required>
-                <textarea rows="5" placeholder="Descreva brevemente o serviço necessário..."></textarea>
-                <button type="submit">ENVIAR PEDIDO</button>
-            </form>
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Nome Completo">
+                    <input type="email" placeholder="E-mail">
+                    <textarea rows="4" placeholder="Qual o seu projeto?"></textarea>
+                    <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">ENVIAR MENSAGEM</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer>
-        &copy; 2023 Eletricista Pro - Todos os direitos reservados. <br>
-        Segurança em primeiro lugar.
+        &copy; 2026 Eletricista Pro - Engenharia Elétrica & Design. <br>
+        Elevando o padrão das instalações elétricas.
     </footer>
 
 </body>
