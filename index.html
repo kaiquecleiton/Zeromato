@@ -3,215 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EletroBoss | Engenharia Elétrica & Automação</title>
+    <title>EletroBoss | Seu Eletricista de Confiança</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         :root {
-            --brand-amber: #d97706; /* Laranja queimado sofisticado */
-            --bg-deep: #0a0a0a;
-            --border-subtle: rgba(255, 255, 255, 0.08);
+            --brand-orange: #f97316;
+            --dark-bg: #0f172a;
         }
         
         body {
-            background-color: var(--bg-deep);
-            color: #f4f4f5;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            letter-spacing: -0.02em;
+            background-color: var(--dark-bg);
+            color: #f8fafc;
+            font-family: 'Outfit', sans-serif;
         }
 
-        .text-gradient {
-            background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        h1, h2, h3 { font-family: 'Sora', sans-serif; }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
         }
 
-        /* Hero Composition */
-        .hero-image-container {
+        /* Efeito de destaque humanizado */
+        .personal-badge {
+            background: linear-gradient(90deg, #f97316 0%, #ea580c 100%);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        .photo-frame {
             position: relative;
-            border-radius: 2px; /* Visual industrial mais reto */
+            border-radius: 30px;
             overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
 
-        .hero-image-container::after {
-            content: '';
+        .photo-frame::before {
+            content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(to right, var(--bg-deep) 0%, transparent 15%, transparent 85%, var(--bg-deep) 100%);
+            border: 2px solid var(--brand-orange);
+            opacity: 0.2;
+            border-radius: 30px;
         }
 
-        /* Professional Review Cards */
-        .review-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-subtle);
-            padding: 24px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .review-card:hover {
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(217, 119, 6, 0.3);
-        }
-
-        /* Subtle Glow */
-        .amber-glow {
-            filter: blur(120px);
-            background: var(--brand-amber);
-            opacity: 0.15;
-            position: absolute;
-            z-index: -1;
-        }
-
-        .btn-corporate {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-
-        .btn-corporate:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -10px var(--brand-amber);
+        .floating-info {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(249, 115, 22, 0.4);
+            backdrop-filter: blur(8px);
         }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 border-b border-white/[0.05] bg-black/20 backdrop-blur-xl py-5 px-8 md:px-16 flex justify-between items-center">
-        <div class="text-xl font-bold tracking-tight uppercase">
-            Eletro<span class="text-[#d97706]">Boss</span>
+    <nav class="fixed w-full z-50 py-6 px-6 md:px-12 flex justify-between items-center bg-slate-950/50 backdrop-blur-md">
+        <div class="text-2xl font-bold font-sora tracking-tighter">
+            Eletro<span class="text-orange-500">Boss</span>
         </div>
-        <div class="hidden md:flex gap-10 text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-500">
-            <a href="#servicos" class="hover:text-white transition">Expertise</a>
-            <a href="#confianca" class="hover:text-white transition">Confiança</a>
-            <a href="#contato" class="hover:text-white transition">Contato</a>
-        </div>
-        <a href="https://wa.me/556799332264" class="text-[12px] font-bold border border-white/10 px-5 py-2 hover:bg-white hover:text-black transition duration-500">
-            CONTATO DIRETO
+        <a href="https://wa.me/556799332264" class="personal-badge px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2">
+            <i class="fab fa-whatsapp"></i> Chamar Agora
         </a>
     </nav>
 
-    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <div class="amber-glow w-[500px] h-[500px] -top-20 -left-20"></div>
-        
-        <div class="container mx-auto px-8 md:px-16 grid lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7" data-aos="fade-up">
-                <span class="inline-block py-1 px-3 border border-amber-600/30 text-amber-600 text-[10px] font-black uppercase tracking-widest mb-6 rounded">
-                    Campo Grande & Região
-                </span>
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.05] mb-8 text-gradient">
-                    Engenharia Elétrica <br> de Alto Padrão.
-                </h1>
-                <p class="text-zinc-500 text-lg md:text-xl max-w-xl mb-12 font-light leading-relaxed">
-                    Soluções técnicas precisas para residências de luxo, comércios e automação de portões. Segurança certificada e atendimento imediato.
-                </p>
+    <section class="relative min-h-screen flex items-center pt-24 px-6 md:px-12">
+        <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-orange-500/10 border border-orange-500/20 text-orange-500 rounded-lg text-xs font-bold uppercase tracking-widest mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                    </span>
+                    Atendimento Especializado em Campo Grande
+                </div>
                 
-                <div class="flex flex-wrap gap-5">
-                    <a href="https://wa.me/556799332264" class="btn-corporate bg-amber-600 text-black px-10 py-5 font-bold text-sm rounded-sm">
-                        SOLICITAR VISITA TÉCNICA
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    Soluções elétricas feitas por quem <span class="text-orange-500">entende e cuida.</span>
+                </h1>
+                <p class="text-slate-400 text-lg mb-10 max-w-lg leading-relaxed">
+                    Olá, eu sou o responsável pela <strong>EletroBoss</strong>. Aqui você não fala com uma máquina, fala direto com o técnico. Ofereço segurança e agilidade para sua casa ou empresa.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/556799332264" class="personal-badge text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition hover:scale-105">
+                        Falar direto no WhatsApp
                     </a>
-                    <div class="flex items-center gap-4 px-6 text-zinc-400 text-sm">
-                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                        Disponível agora
+                </div>
+
+                <div class="mt-10 flex items-center gap-4 p-4 glass-card max-w-sm">
+                    <div class="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-500">
+                        <i class="fas fa-user-shield"></i>
                     </div>
+                    <p class="text-sm text-slate-300 italic">"Serviço limpo, seguro e com garantia de quem assina o que faz."</p>
                 </div>
             </div>
 
-            <div class="lg:col-span-5 relative hidden lg:block" data-aos="fade-left">
-                <div class="hero-image-container border-l border-white/5">
-                    <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&q=80&w=1000" 
+            <div class="relative flex justify-center" data-aos="zoom-in">
+                <div class="photo-frame w-full max-w-md">
+                    <img src="https://images.unsplash.com/photo-1558389186-438424b00a32?auto=format&fit=crop&q=80&w=800" 
                          alt="Técnico EletroBoss" 
-                         class="w-full h-[600px] object-cover grayscale-[0.3] hover:grayscale-0 transition duration-1000">
+                         class="w-full h-[550px] object-cover">
                 </div>
-                <div class="absolute bottom-10 -left-10 bg-black border border-white/10 p-6 backdrop-blur-lg">
-                    <p class="text-[10px] uppercase tracking-widest text-amber-600 font-bold mb-1">Padrão de Qualidade</p>
-                    <p class="text-sm font-medium">Equipamentos Fluke & Milwaukee</p>
+                
+                <div class="absolute -bottom-6 -left-6 floating-info p-5 rounded-2xl shadow-2xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-orange-500 font-bold text-xl">+500</div>
+                    <div class="text-xs uppercase font-bold text-slate-400">Clientes Atendidos</div>
+                </div>
+                
+                <div class="absolute top-10 -right-6 floating-info p-5 rounded-2xl shadow-2xl" data-aos="fade-left" data-aos-delay="600">
+                    <div class="flex text-orange-500 gap-1 text-xs mb-1">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="text-xs font-bold">Nota 5.0 no Google</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="confianca" class="py-32 bg-[#080808] border-y border-white/[0.03]">
-        <div class="container mx-auto px-8 md:px-16">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                <div class="max-w-2xl">
-                    <h2 class="text-3xl font-bold mb-4">Reputação e Resultados</h2>
-                    <p class="text-zinc-500 font-light">Nossa credibilidade é construída através de um atendimento técnico rigoroso e pontualidade britânica.</p>
-                </div>
-                <div class="text-right">
-                    <div class="text-4xl font-bold">4.9</div>
-                    <div class="text-amber-600 text-xs tracking-widest uppercase font-black">Nota Google Business</div>
-                </div>
+    <section class="py-24 px-6 bg-slate-900/30">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Como eu posso te ajudar hoje?</h2>
+                <p class="text-slate-400">Serviços técnicos com foco em resolução rápida e segura.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="review-card" data-aos="fade-up">
-                    <div class="flex gap-1 text-[10px] text-amber-600 mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 hover:border-orange-500/50 transition">
+                    <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-500 text-2xl mb-6">
+                        <i class="fas fa-home"></i>
                     </div>
-                    <p class="text-zinc-300 text-sm leading-relaxed mb-6">
-                        "Atendimento rápido e serviço bem feito. O técnico explicou todo o processo da manutenção do motor do portão."
-                    </p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-[1px] bg-amber-600/50"></div>
-                        <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">Cliente Residencial</span>
-                    </div>
+                    <h3 class="text-xl font-bold mb-3">Elétrica Residencial</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Troca de fiação, chuveiros, tomadas e quadros de energia com total segurança.</p>
                 </div>
 
-                <div class="review-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex gap-1 text-[10px] text-amber-600 mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="glass-card p-8 hover:border-orange-500/50 transition">
+                    <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-500 text-2xl mb-6">
+                        <i class="fas fa-door-open"></i>
                     </div>
-                    <p class="text-zinc-300 text-sm leading-relaxed mb-6">
-                        "Resolveram o problema do quadro de energia do meu comércio sem enrolação. Equipe muito profissional e limpa."
-                    </p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-[1px] bg-amber-600/50"></div>
-                        <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">Cliente Comercial</span>
-                    </div>
+                    <h3 class="text-xl font-bold mb-3">Portões Eletrônicos</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Manutenção de motores, configuração de controles e instalação completa.</p>
                 </div>
 
-                <div class="review-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex gap-1 text-[10px] text-amber-600 mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="glass-card p-8 hover:border-orange-500/50 transition">
+                    <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-500 text-2xl mb-6">
+                        <i class="fas fa-bolt"></i>
                     </div>
-                    <p class="text-zinc-300 text-sm leading-relaxed mb-6">
-                        "Equipe educada e pontual. O suporte emergencial funcionou conforme o prometido. Recomendo para condomínios."
-                    </p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-[1px] bg-amber-600/50"></div>
-                        <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">Gestão Predial</span>
-                    </div>
+                    <h3 class="text-xl font-bold mb-3">Emergência 24h</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Ficou sem luz ou o portão travou? Atendimento rápido em qualquer horário.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-32 bg-black relative">
-        <div class="container mx-auto px-8 text-center" data-aos="zoom-out">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8">Pronto para um atendimento <br> realmente profissional?</h2>
-            <p class="text-zinc-500 mb-12 max-w-lg mx-auto">Evite riscos elétricos e manutenções amadoras. Garanta a longevidade do seu sistema com a EletroBoss.</p>
-            <a href="https://wa.me/556799332264" class="inline-block bg-white text-black px-12 py-5 font-black text-xs uppercase tracking-[0.2em] hover:bg-amber-600 hover:text-white transition duration-500">
-                Falar com Especialista
+    <section class="py-24 px-6 bg-[#0f172a]">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">O que dizem sobre meu trabalho</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-8 border border-white/5 rounded-3xl bg-slate-900/50">
+                    <div class="flex gap-1 text-orange-500 text-xs mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm italic mb-6">"Me atendeu super rápido no sábado à noite. Profissional muito educado e resolveu o curto na hora."</p>
+                    <div class="font-bold text-xs uppercase tracking-widest text-slate-500">— Cliente em Campo Grande</div>
+                </div>
+
+                <div class="p-8 border border-white/5 rounded-3xl bg-slate-900/50">
+                    <div class="flex gap-1 text-orange-500 text-xs mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm italic mb-6">"Instalou o motor do meu portão e deixou tudo configurado. Preço justo e serviço muito limpo."</p>
+                    <div class="font-bold text-xs uppercase tracking-widest text-slate-500">— Cliente Residencial</div>
+                </div>
+
+                <div class="p-8 border border-white/5 rounded-3xl bg-slate-900/50">
+                    <div class="flex gap-1 text-orange-500 text-xs mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm italic mb-6">"Excelente profissional. Trocou o padrão de energia da minha loja e ficou impecável."</p>
+                    <div class="font-bold text-xs uppercase tracking-widest text-slate-500">— Cliente Comercial</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 text-center">
+        <div class="container mx-auto glass-card p-12 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-orange-500 opacity-10 rounded-full blur-[100px]"></div>
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Precisa de ajuda agora?</h2>
+            <p class="text-slate-400 mb-10 max-w-lg mx-auto">Não perca tempo com amadores. Fale direto comigo e tenha a solução que você precisa com segurança.</p>
+            <a href="https://wa.me/556799332264" class="personal-badge text-white px-10 py-5 rounded-2xl font-bold text-xl inline-flex items-center gap-3">
+                <i class="fab fa-whatsapp"></i> Conversar com o Técnico
             </a>
         </div>
     </section>
 
-    <footer class="py-10 border-t border-white/5 px-8 md:px-16 flex flex-col md:flex-row justify-between items-center text-[10px] text-zinc-600 uppercase tracking-widest font-bold">
-        <div>&copy; 2026 EletroBoss Engenharia</div>
-        <div class="flex gap-8 mt-6 md:mt-0">
-            <a href="#" class="hover:text-amber-600">Instagram</a>
-            <a href="#" class="hover:text-amber-600">LinkedIn</a>
-            <a href="https://wa.me/556799332264" class="hover:text-amber-600">WhatsApp</a>
-        </div>
+    <footer class="py-12 border-t border-white/5 px-6 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 EletroBoss - Campo Grande/MS. Todos os direitos reservados.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        AOS.init({ duration: 1000, once: true });
     </script>
 </body>
 </html>
