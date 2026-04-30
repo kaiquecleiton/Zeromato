@@ -14,7 +14,6 @@
         
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 0; }
 
-        /* Header Premium do Primeiro Modelo */
         .glass-dark { 
             background: rgba(15, 23, 42, 0.9); 
             backdrop-filter: blur(12px); 
@@ -23,15 +22,12 @@
         
         .btn-action {
             background: linear-gradient(135deg, #facc15, #eab308);
-            box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
+            box-shadow: 0 4px 15px rgba(234, 179, 8, 0.3);
             color: #000 !important;
             transition: all 0.3s ease;
         }
-        .btn-action:hover { transform: translateY(-1px); box-shadow: 0 6px 15px rgba(234, 179, 8, 0.5); }
+        .btn-action:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(234, 179, 8, 0.5); }
 
-        .no-break { white-space: nowrap !important; }
-
-        /* Card Pro com o efeito de borda e hover do primeiro modelo */
         .card-pro {
             background: rgba(30, 41, 59, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -40,60 +36,63 @@
         }
         .card-pro:hover { transform: translateY(-5px); background: rgba(30, 41, 59, 0.8); }
 
-        /* Efeito de imagem do primeiro modelo */
-        .img-container {
+        .no-break { white-space: nowrap !important; }
+        
+        .img-shadow {
+            box-shadow: 0 0 50px rgba(234, 179, 8, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <header class="fixed w-full z-50 glass-dark py-3 px-4 md:px-12 flex justify-between items-center">
-        <div class="text-lg md:text-xl font-extrabold tracking-tighter flex items-center gap-3">
-            <i class="fas fa-bolt text-yellow-500 text-base"></i>
-            <span class="flex items-center">ELETRO<span class="text-yellow-500">BOSS</span></span>
+    <header class="fixed w-full z-50 glass-dark py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="text-xl md:text-2xl font-extrabold tracking-tighter flex items-center gap-3">
+            <i class="fas fa-bolt text-yellow-500"></i>
+            <span>ELETRO<span class="text-yellow-500">BOSS</span></span>
         </div>
         
-        <a href="https://wa.me/5567993322643" class="btn-action px-4 py-2 rounded-full font-bold text-[10px] md:text-xs no-break uppercase tracking-wider flex-shrink-0">
+        <a href="https://wa.me/5567993322643" class="btn-action px-5 py-2.5 rounded-full font-bold text-[10px] md:text-xs uppercase tracking-widest no-break flex-shrink-0">
             EMERGÊNCIA 24H
         </a>
     </header>
 
-    <section class="relative pt-32 pb-12 px-6 overflow-hidden min-h-[85vh] flex items-center">
+    <section class="relative pt-36 pb-16 px-6 min-h-[85vh] flex items-center overflow-hidden">
         <div class="max-w-7xl mx-auto w-full">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 
-                <div data-aos="fade-up">
-                    <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/20 py-1 px-3 rounded-full mb-4">
-                        <span class="text-yellow-400 text-[9px] font-bold uppercase tracking-widest italic">● Técnicos de Plantão</span>
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/20 py-1.5 px-4 rounded-full mb-6">
+                        <span class="text-yellow-500 text-[10px] font-bold uppercase tracking-[0.2em] animate-pulse">● Atendimento Imediato</span>
                     </div>
                     
-                    <h1 class="text-[40px] md:text-7xl font-extrabold leading-[1.1] mb-4 tracking-tight">
-                        Faltou luz ou o <br><span class="text-yellow-500">Portão parou?</span>
+                    <h1 class="text-[42px] md:text-7xl font-extrabold leading-[1.1] mb-6 tracking-tight">
+                        Faltou luz ou o <br><span class="text-yellow-500">portão parou?</span>
                     </h1>
                     
-                    <p class="text-slate-400 text-sm md:text-lg mb-8 max-w-lg leading-relaxed">
+                    <p class="text-slate-400 text-base md:text-xl mb-10 max-w-lg leading-relaxed">
                         Resolução de panes elétricas, curto-circuitos e manutenção de motores de portão. O <strong>EletroBoss</strong> chega rápido para você não ficar no escuro.
                     </p>
                     
-                    <div class="flex flex-col gap-4">
-                        <a href="https://wa.me/5567993322643" class="btn-action py-4 px-8 rounded-xl font-black text-center text-lg md:w-max uppercase">
-                            SOLICITAR TÉCNICO AGORA
+                    <div class="flex flex-col sm:flex-row gap-5">
+                        <a href="https://wa.me/5567993322643" class="btn-action py-5 px-10 rounded-2xl font-black text-center text-lg md:text-xl uppercase">
+                            CHAMAR TÉCNICO AGORA
                         </a>
-                        <div class="flex items-center gap-2 text-yellow-500 text-xs font-bold">
+                    </div>
+                    <div class="mt-8 flex items-center gap-3">
+                        <div class="flex text-yellow-500 text-sm">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span class="text-slate-400 ml-2">+500 Atendimentos em Campo Grande</span>
                         </div>
+                        <span class="text-slate-400 text-xs font-bold uppercase tracking-widest">+500 Atendimentos em Campo Grande</span>
                     </div>
                 </div>
 
-                <div class="relative group" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="img-container relative rounded-[2rem] overflow-hidden aspect-[4/3] md:aspect-square bg-slate-800">
+                <div class="relative" data-aos="fade-left">
+                    <div class="img-shadow relative rounded-[2.5rem] overflow-hidden aspect-square md:aspect-auto md:h-[550px]">
                         <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80" 
-                             alt="Serviço EletroBoss" 
-                             class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                             alt="Eletricista Profissional" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
                     </div>
                     <div class="absolute -inset-4 bg-yellow-500/10 blur-3xl rounded-full -z-10"></div>
                 </div>
@@ -103,33 +102,47 @@
     </section>
 
     <section class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="card-pro p-8 rounded-2xl" data-aos="fade-up">
-                <i class="fas fa-plug-circle-bolt text-yellow-500 text-2xl mb-4 block"></i>
-                <h3 class="text-lg font-bold mb-2 uppercase tracking-tight">Pane Elétrica</h3>
-                <p class="text-slate-400 text-xs leading-relaxed">Curto-circuito e falta de energia? Resolvemos na hora com garantia técnica total.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card-pro p-8 rounded-3xl" data-aos="fade-up">
+                <i class="fas fa-plug-circle-bolt text-yellow-500 text-3xl mb-6 block"></i>
+                <h3 class="text-xl font-bold mb-3 uppercase tracking-tight">Pane Elétrica</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Identificação rápida de curto-circuitos e restauração imediata de energia residencial ou comercial.</p>
             </div>
 
-            <div class="card-pro p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
-                <i class="fas fa-gears text-yellow-500 text-2xl mb-4 block"></i>
-                <h3 class="text-lg font-bold mb-2 uppercase tracking-tight">Motores de Portão</h3>
-                <p class="text-slate-400 text-xs leading-relaxed">Manutenção de placas, motores travados e configuração de controles 24 horas.</p>
+            <div class="card-pro p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-gears text-yellow-500 text-3xl mb-6 block"></i>
+                <h3 class="text-xl font-bold mb-3 uppercase tracking-tight">Manutenção de Portão</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Conserto de motores, troca de capacitores, placas e configuração de controles de todas as marcas.</p>
             </div>
 
-            <div class="card-pro p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-truck-fast text-yellow-500 text-2xl mb-4 block"></i>
-                <h3 class="text-lg font-bold mb-2 uppercase tracking-tight">Atendimento 24h</h3>
-                <p class="text-slate-400 text-xs leading-relaxed">Equipe de prontidão para emergências em Campo Grande a qualquer momento.</p>
+            <div class="card-pro p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-clock text-yellow-500 text-3xl mb-6 block"></i>
+                <h3 class="text-xl font-bold mb-3 uppercase tracking-tight">Plantão 24 Horas</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Equipe pronta para emergências a qualquer hora do dia ou da noite em Campo Grande.</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-slate-600 text-[10px] border-t border-white/5">
-        <p class="font-bold text-yellow-500/50 mb-1 tracking-widest uppercase italic">ELETROBOSS.PRO</p>
-        <p>© 2026 SEGURANÇA E TECNOLOGIA ELÉTRICA.</p>
+    <footer class="py-16 px-6 border-t border-white/5 bg-slate-950/50">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+            <div class="text-3xl font-black mb-4 uppercase tracking-tighter">
+                ELETRO<span class="text-yellow-500">BOSS</span>
+            </div>
+            <p class="text-slate-500 max-w-md mb-8 text-sm uppercase tracking-widest font-bold">
+                Segurança e Tecnologia em Serviços Elétricos. Atendimento emergencial especializado.
+            </p>
+            <div class="flex gap-8 mb-10 text-slate-400 text-xl">
+                <i class="fab fa-instagram hover:text-yellow-500 cursor-pointer transition-colors"></i>
+                <i class="fab fa-whatsapp hover:text-yellow-500 cursor-pointer transition-colors"></i>
+                <i class="fab fa-google hover:text-yellow-500 cursor-pointer transition-colors"></i>
+            </div>
+            <div class="text-slate-600 text-[10px] uppercase tracking-[0.3em] font-black">
+                © 2026 EletroBoss Profissional — Campo Grande/MS
+            </div>
+        </div>
     </footer>
 
-    <a href="https://wa.me/5567993322643" class="fixed bottom-6 right-6 bg-[#25d366] w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl z-50 transition-transform hover:scale-110">
+    <a href="https://wa.me/5567993322643" class="fixed bottom-6 right-6 bg-[#25d366] w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-2xl md:text-3xl shadow-2xl z-50 transition-all hover:scale-110 hover:-rotate-12">
         <i class="fab fa-whatsapp text-white"></i>
     </a>
 
