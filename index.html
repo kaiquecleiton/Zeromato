@@ -19,7 +19,6 @@
         .text-orange-boss { color: #ff6a00; }
         .bg-orange-boss { background-color: #ff6a00; }
         
-        /* Ajuste de imagem para manter o aspecto documental */
         .img-documentary { 
             width: 100%; 
             height: auto; 
@@ -28,7 +27,6 @@
             display: block;
         }
 
-        /* Micro-interação premium */
         .btn-transition { transition: all 0.2s ease-in-out; }
         .btn-transition:hover { filter: brightness(1.1); transform: translateY(-1px); }
     </style>
@@ -55,7 +53,7 @@
                     Eletricista e manutenção de portão elétrico.
                 </h1>
                 <p class="text-gray-400 text-lg mb-10 leading-relaxed max-w-md">
-                    Atendimento rápido, serviço profissional e suporte direto no WhatsApp. Foco em soluções técnicas residenciais e comerciais.
+                    Atendimento rápido, serviço profissional e suporte direto no WhatsApp. Foco em soluções técnicas em Campo Grande.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 mb-8">
@@ -63,7 +61,7 @@
                         Chamar no WhatsApp
                     </a>
                     <a href="#servicos" class="border border-boss py-4 px-8 rounded-sm text-center hover:bg-zinc-800 btn-transition">
-                        Pedir orçamento
+                        Ver Serviços
                     </a>
                 </div>
 
@@ -82,40 +80,40 @@
     <section id="servicos" class="py-24 border-t border-boss bg-[#0d0d0d]">
         <div class="container-custom">
             <div class="mb-16">
-                <h2 class="text-2xl font-bold mb-2 uppercase tracking-tight">Serviços</h2>
-                <div class="h-1 w-12 bg-orange-boss"></div>
+                <h2 class="text-2xl font-bold mb-2 uppercase tracking-tight text-center md:text-left">O que resolvemos</h2>
+                <div class="h-1 w-12 bg-orange-boss mx-auto md:mx-0"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
-                <div class="bg-dark-card border border-boss p-8 hover:border-orange-boss/50 transition">
-                    <h3 class="text-lg font-bold mb-3 text-orange-boss">Instalação Elétrica</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Montagem de quadros, fiação completa e novos pontos de energia.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-dark-card border border-boss p-8 hover:border-orange-boss/50 transition flex flex-col">
+                    <span class="text-[10px] font-bold text-gray-600 uppercase mb-4 tracking-widest">Especialidade 01</span>
+                    <h3 class="text-xl font-bold mb-4">Instalações e Reparos</h3>
+                    <ul class="text-gray-400 text-sm space-y-3">
+                        <li class="flex items-center gap-2">✓ Instalação e Manutenção Elétrica</li>
+                        <li class="flex items-center gap-2">✓ Diagnóstico de Curto-circuito</li>
+                        <li class="flex items-center gap-2">✓ Troca de Padrão e Disjuntores</li>
+                    </ul>
                 </div>
-                <div class="bg-dark-card border border-boss p-8 hover:border-orange-boss/50 transition">
-                    <h3 class="text-lg font-bold mb-3 text-orange-boss">Manutenção Elétrica</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Reparos em geral, substituição de disjuntores e tomadas.</p>
+
+                <div class="bg-dark-card border border-boss p-8 hover:border-orange-boss/50 transition flex flex-col">
+                    <span class="text-[10px] font-bold text-gray-600 uppercase mb-4 tracking-widest">Especialidade 02</span>
+                    <h3 class="text-xl font-bold mb-4">Portões Eletrônicos</h3>
+                    <ul class="text-gray-400 text-sm space-y-3">
+                        <li class="flex items-center gap-2">✓ Instalação de Motores</li>
+                        <li class="flex items-center gap-2">✓ Manutenção Preventiva e Corretiva</li>
+                        <li class="flex items-center gap-2">✓ Configuração de Controles/Centrais</li>
+                    </ul>
                 </div>
-                <div class="bg-dark-card border border-boss p-8 hover:border-orange-boss/50 transition">
-                    <h3 class="text-lg font-bold mb-3 text-orange-boss">Curto-circuito</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Diagnóstico técnico e resolução de panes elétricas com segurança.</p>
+
+                <div class="bg-dark-card border border-boss p-8 hover:border-orange-boss/50 transition flex flex-col">
+                    <span class="text-[10px] font-bold text-gray-600 uppercase mb-4 tracking-widest">Especialidade 03</span>
+                    <h3 class="text-xl font-bold mb-4">Sistemas e Acessos</h3>
+                    <ul class="text-gray-400 text-sm space-y-3">
+                        <li class="flex items-center gap-2">✓ Instalação de Interfones</li>
+                        <li class="flex items-center gap-2">✓ Fechaduras Eletrônicas</li>
+                        <li class="flex items-center gap-2">✓ Manutenção de Cabeamento</li>
+                    </ul>
                 </div>
-                <div class="bg-dark-card border border-boss p-8 hover:border-orange-boss/50 transition">
-                    <h3 class="text-lg font-bold mb-3 text-orange-boss">Troca de Padrão</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Adequação de padrões de entrada conforme normas da concessionária.</p>
-                </div>
-                <div class="bg-dark-card border border-boss p-8 hover:border-orange-boss/50 transition">
-                    <h3 class="text-lg font-bold mb-3 text-orange-boss">Portão Eletrônico</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Instalação e configuração de motores e centrais de comando.</p>
-                </div>
-                <div class="bg-dark-card border border-boss p-8 hover:border-orange-boss/50 transition">
-                    <h3 class="text-lg font-bold mb-3 text-orange-boss">Motor de Portão</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Manutenção mecânica e elétrica em motores travados ou lentos.</p>
-                </div>
-            </div>
-            
-            <div class="mt-1 bg-dark-card border border-boss p-8 text-center md:text-left">
-                <h3 class="text-lg font-bold mb-3 text-orange-boss">Interfone</h3>
-                <p class="text-gray-400 text-sm leading-relaxed max-w-sm">Manutenção e instalação de sistemas de comunicação e fechaduras elétricas.</p>
             </div>
         </div>
     </section>
@@ -126,12 +124,12 @@
                 <img src="sobre.png" alt="Serviço elétrico" class="img-documentary opacity-80">
             </div>
             <div class="order-1 md:order-2">
-                <h2 class="text-3xl font-bold mb-8">Serviço direto e sem enrolação.</h2>
+                <h2 class="text-3xl font-bold mb-8 leading-tight">Serviço direto e sem enrolação.</h2>
                 <p class="text-gray-400 text-lg leading-relaxed mb-6">
                     A EletroBoss foca no essencial: resolver o problema elétrico ou de automação com rapidez e organização técnica.
                 </p>
                 <p class="text-gray-400 text-lg leading-relaxed">
-                    Trabalhamos com atendimento direto, eliminando intermediários para garantir que o suporte técnico seja preciso e transparente desde o primeiro contato no WhatsApp.
+                    Trabalhamos com atendimento direto, eliminando intermediários para garantir que o suporte técnico seja preciso e transparente desde o primeiro contato.
                 </p>
             </div>
         </div>
@@ -140,22 +138,22 @@
     <section class="py-32 border-t border-boss bg-black">
         <div class="container-custom text-center">
             <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Precisando resolver hoje?</h2>
-            <p class="text-gray-500 text-lg mb-12">Chame no WhatsApp e solicite atendimento.</p>
+            <p class="text-gray-500 text-lg mb-12">Chame no WhatsApp e solicite atendimento em Campo Grande.</p>
             
             <a href="https://wa.me/556799332264" class="inline-block bg-orange-boss text-black font-extrabold py-6 px-16 rounded-sm text-xl btn-transition">
                 Falar no WhatsApp
             </a>
             
             <div class="mt-12 flex justify-center gap-10 text-[10px] font-bold uppercase tracking-widest text-gray-600">
-                <span>Campo Grande - MS</span>
-                <span>Atendimento Direto</span>
+                <span>Atendimento Residencial</span>
+                <span>Atendimento Comercial</span>
             </div>
         </div>
     </section>
 
     <footer class="py-10 border-t border-boss text-center">
-        <p class="text-xs text-gray-600 font-medium uppercase tracking-tighter">
-            © 2026 EletroBoss — Profissionalismo e Rigor Técnico
+        <p class="text-[10px] text-gray-600 font-medium uppercase tracking-widest">
+            © 2026 EletroBoss — Rigor Técnico e Qualidade
         </p>
     </footer>
 
