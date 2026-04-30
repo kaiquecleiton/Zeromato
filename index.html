@@ -3,214 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EletroBoss | Seu Eletricista de Confiança</title>
-    
+    <title>EletroBoss | Elétrica & Automação de Portões</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend+Deca:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    
     <style>
         :root {
-            --brand-orange: #f97316;
-            --dark-bg: #0f172a;
+            --orange-burnt: #e65100;
+            --black-matte: #0f0f0f;
+            --gray-graphite: #1a1a1a;
+            --white-soft: #f5f5f5;
+            --border-ui: #2a2a2a;
         }
-        
+
         body {
-            background-color: var(--dark-bg);
-            color: #f8fafc;
-            font-family: 'Outfit', sans-serif;
+            background-color: var(--black-matte);
+            color: var(--white-soft);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3 { font-family: 'Sora', sans-serif; }
+        h1, h2, h3, .font-heading { font-family: 'Lexend Deca', sans-serif; }
 
-        .glass-card {
-            background: rgba(30, 41, 59, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 24px;
+        /* Enquadramento e Organização */
+        .container-frame {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
-        /* Efeito de destaque humanizado */
-        .personal-badge {
-            background: linear-gradient(90deg, #f97316 0%, #ea580c 100%);
-            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        .section-divider {
+            border-top: 1px solid var(--border-ui);
         }
 
-        .photo-frame {
-            position: relative;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        /* Identidade Visual: Cards de Serviço */
+        .service-card {
+            background: var(--gray-graphite);
+            border: 1px solid var(--border-ui);
+            padding: 32px;
+            transition: all 0.3s ease;
         }
 
-        .photo-frame::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border: 2px solid var(--brand-orange);
-            opacity: 0.2;
-            border-radius: 30px;
+        .service-card:hover {
+            border-color: var(--orange-burnt);
+            transform: translateY(-4px);
         }
 
-        .floating-info {
-            background: rgba(15, 23, 42, 0.9);
-            border: 1px solid rgba(249, 115, 22, 0.4);
-            backdrop-filter: blur(8px);
+        /* Prova Real: Estilo Google Business Minimalista */
+        .trust-badge {
+            background: #141414;
+            border: 1px solid var(--border-ui);
+            padding: 16px 24px;
+            border-radius: 4px;
+        }
+
+        .feedback-item {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            border-bottom: 1px solid #222;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+        }
+
+        /* Botões Pragmáticos */
+        .btn-direct {
+            background-color: var(--orange-burnt);
+            color: #fff;
+            padding: 14px 28px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.3s;
+        }
+
+        .btn-direct:hover {
+            filter: brightness(1.1);
+        }
+
+        /* Documental Images Effect */
+        .img-doc {
+            filter: grayscale(0.2) contrast(1.1);
+            border-radius: 2px;
         }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 py-6 px-6 md:px-12 flex justify-between items-center bg-slate-950/50 backdrop-blur-md">
-        <div class="text-2xl font-bold font-sora tracking-tighter">
-            Eletro<span class="text-orange-500">Boss</span>
+    <nav class="border-b border-[#2a2a2a] py-6 bg-[#0f0f0f]/90 backdrop-blur-sm sticky top-0 z-50">
+        <div class="container-frame flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tighter uppercase font-heading">
+                Eletro<span class="text-[#e65100]">Boss</span>
+            </div>
+            <div class="flex gap-8 text-[11px] font-bold uppercase tracking-widest text-zinc-500">
+                <a href="#servicos" class="hover:text-white transition">Serviços</a>
+                <a href="#confianca" class="hover:text-white transition">Transparência</a>
+                <a href="https://wa.me/556799332264" class="text-[#e65100]">WhatsApp</a>
+            </div>
         </div>
-        <a href="https://wa.me/556799332264" class="personal-badge px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2">
-            <i class="fab fa-whatsapp"></i> Chamar Agora
-        </a>
     </nav>
 
-    <section class="relative min-h-screen flex items-center pt-24 px-6 md:px-12">
-        <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <section class="py-24">
+        <div class="container-frame">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <p class="text-[#e65100] font-bold text-xs uppercase tracking-widest mb-4">Campo Grande / MS</p>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                        Serviço elétrico <br> organizado e profissional.
+                    </h1>
+                    <p class="text-zinc-400 text-lg mb-10 max-w-md leading-relaxed">
+                        Instalações residenciais, manutenção comercial e suporte técnico para portões automáticos. Sem enrolação, direto ao ponto.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/556799332264" class="btn-direct">
+                            <i class="fab fa-whatsapp"></i> Orçamento no WhatsApp
+                        </a>
+                    </div>
+                    <div class="mt-8 flex gap-6 text-[11px] text-zinc-600 font-bold uppercase">
+                        <span>✓ Atendimento Direto</span>
+                        <span>✓ Reparos em 24h</span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35482cd34b4?auto=format&fit=crop&q=80&w=800" 
+                         alt="Trabalho Elétrico Real" 
+                         class="img-doc w-full h-[400px] object-cover border border-[#2a2a2a]">
+                    <div class="absolute -bottom-4 -right-4 bg-[#e65100] p-4 hidden md:block">
+                        <i class="fas fa-tools text-2xl text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 section-divider bg-[#0c0c0c]">
+        <div class="container-frame">
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold uppercase tracking-tight mb-2">Expertise Técnica</h2>
+                <div class="w-12 h-1 bg-[#e65100]"></div>
+            </div>
             
-            <div data-aos="fade-right">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-orange-500/10 border border-orange-500/20 text-orange-500 rounded-lg text-xs font-bold uppercase tracking-widest mb-6">
-                    <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-                    </span>
-                    Atendimento Especializado em Campo Grande
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-1">
+                <div class="service-card">
+                    <h3 class="text-white font-bold mb-3 uppercase text-sm tracking-wider">Elétrica Residencial</h3>
+                    <p class="text-zinc-500 text-xs leading-relaxed">Troca de padrão, fiação, tomadas e disjuntores. Tudo dentro das normas de segurança.</p>
                 </div>
-                
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
-                    Soluções elétricas feitas por quem <span class="text-orange-500">entende e cuida.</span>
-                </h1>
-                <p class="text-slate-400 text-lg mb-10 max-w-lg leading-relaxed">
-                    Olá, eu sou o responsável pela <strong>EletroBoss</strong>. Aqui você não fala com uma máquina, fala direto com o técnico. Ofereço segurança e agilidade para sua casa ou empresa.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/556799332264" class="personal-badge text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition hover:scale-105">
-                        Falar direto no WhatsApp
-                    </a>
+                <div class="service-card">
+                    <h3 class="text-white font-bold mb-3 uppercase text-sm tracking-wider">Portões Automáticos</h3>
+                    <p class="text-zinc-500 text-xs leading-relaxed">Instalação e manutenção de motores Rossi, PPA e Peccinin. Configuração de placas e controles.</p>
                 </div>
-
-                <div class="mt-10 flex items-center gap-4 p-4 glass-card max-w-sm">
-                    <div class="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-500">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <p class="text-sm text-slate-300 italic">"Serviço limpo, seguro e com garantia de quem assina o que faz."</p>
+                <div class="service-card">
+                    <h3 class="text-white font-bold mb-3 uppercase text-sm tracking-wider">Painéis e Quadros</h3>
+                    <p class="text-zinc-500 text-xs leading-relaxed">Montagem e organização técnica de quadros de distribuição para residências e lojas.</p>
                 </div>
-            </div>
-
-            <div class="relative flex justify-center" data-aos="zoom-in">
-                <div class="photo-frame w-full max-w-md">
-                    <img src="https://images.unsplash.com/photo-1558389186-438424b00a32?auto=format&fit=crop&q=80&w=800" 
-                         alt="Técnico EletroBoss" 
-                         class="w-full h-[550px] object-cover">
+                <div class="service-card">
+                    <h3 class="text-white font-bold mb-3 uppercase text-sm tracking-wider">Atendimento Emergencial</h3>
+                    <p class="text-zinc-500 text-xs leading-relaxed">Pane elétrica ou portão travado? Atendimento rápido direto com o técnico.</p>
                 </div>
-                
-                <div class="absolute -bottom-6 -left-6 floating-info p-5 rounded-2xl shadow-2xl" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-orange-500 font-bold text-xl">+500</div>
-                    <div class="text-xs uppercase font-bold text-slate-400">Clientes Atendidos</div>
+                <div class="service-card">
+                    <h3 class="text-white font-bold mb-3 uppercase text-sm tracking-wider">Manutenção Preventiva</h3>
+                    <p class="text-zinc-500 text-xs leading-relaxed">Revisão completa para evitar curto-circuito e garantir economia na conta de luz.</p>
                 </div>
-                
-                <div class="absolute top-10 -right-6 floating-info p-5 rounded-2xl shadow-2xl" data-aos="fade-left" data-aos-delay="600">
-                    <div class="flex text-orange-500 gap-1 text-xs mb-1">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <div class="text-xs font-bold">Nota 5.0 no Google</div>
+                <div class="service-card">
+                    <h3 class="text-white font-bold mb-3 uppercase text-sm tracking-wider">Interfonia</h3>
+                    <p class="text-zinc-500 text-xs leading-relaxed">Instalação e reparo de sistemas de interfone e fechaduras elétricas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 bg-slate-900/30">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Como eu posso te ajudar hoje?</h2>
-                <p class="text-slate-400">Serviços técnicos com foco em resolução rápida e segura.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-card p-8 hover:border-orange-500/50 transition">
-                    <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-500 text-2xl mb-6">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Elétrica Residencial</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Troca de fiação, chuveiros, tomadas e quadros de energia com total segurança.</p>
+    <section id="confianca" class="py-24 section-divider">
+        <div class="container-frame">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-2xl font-bold mb-6">Por que confiar na EletroBoss?</h2>
+                    <p class="text-zinc-500 mb-8 leading-relaxed">
+                        Meu trabalho é baseado em organização e transparência. Quando você me chama, recebe um diagnóstico real do problema e um serviço que não vai precisar de "remendo" depois de uma semana.
+                    </p>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fas fa-check text-[#e65100]"></i> Ferramentas profissionais de medição</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fas fa-check text-[#e65100]"></i> Respeito aos horários combinados</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fas fa-check text-[#e65100]"></i> Orçamento justo enviado na hora</li>
+                    </ul>
                 </div>
-
-                <div class="glass-card p-8 hover:border-orange-500/50 transition">
-                    <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-500 text-2xl mb-6">
-                        <i class="fas fa-door-open"></i>
+                
+                <div class="trust-badge">
+                    <div class="flex justify-between items-center mb-8 pb-4 border-b border-[#2a2a2a]">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Feedback Local</span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg font-bold">5.0</span>
+                            <div class="flex text-[#e65100] text-[8px]">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Portões Eletrônicos</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Manutenção de motores, configuração de controles e instalação completa.</p>
-                </div>
-
-                <div class="glass-card p-8 hover:border-orange-500/50 transition">
-                    <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-500 text-2xl mb-6">
-                        <i class="fas fa-bolt"></i>
+                    
+                    <div class="feedback-item">
+                        <p>"Resolveu o problema do meu portão de forma rápida. Muito educado."</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Emergência 24h</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Ficou sem luz ou o portão travou? Atendimento rápido em qualquer horário.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 bg-[#0f172a]">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center">O que dizem sobre meu trabalho</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-8 border border-white/5 rounded-3xl bg-slate-900/50">
-                    <div class="flex gap-1 text-orange-500 text-xs mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <div class="feedback-item">
+                        <p>"Serviço limpo e organizado. Indico com certeza."</p>
                     </div>
-                    <p class="text-slate-300 text-sm italic mb-6">"Me atendeu super rápido no sábado à noite. Profissional muito educado e resolveu o curto na hora."</p>
-                    <div class="font-bold text-xs uppercase tracking-widest text-slate-500">— Cliente em Campo Grande</div>
-                </div>
-
-                <div class="p-8 border border-white/5 rounded-3xl bg-slate-900/50">
-                    <div class="flex gap-1 text-orange-500 text-xs mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <div class="feedback-item">
+                        <p>"O único que atendeu prontamente no domingo. Salvou a gente."</p>
                     </div>
-                    <p class="text-slate-300 text-sm italic mb-6">"Instalou o motor do meu portão e deixou tudo configurado. Preço justo e serviço muito limpo."</p>
-                    <div class="font-bold text-xs uppercase tracking-widest text-slate-500">— Cliente Residencial</div>
-                </div>
-
-                <div class="p-8 border border-white/5 rounded-3xl bg-slate-900/50">
-                    <div class="flex gap-1 text-orange-500 text-xs mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <div class="text-center mt-4">
+                        <a href="https://wa.me/556799332264" class="text-[10px] uppercase font-bold text-zinc-600 hover:text-[#e65100] transition">Ver todos no WhatsApp</a>
                     </div>
-                    <p class="text-slate-300 text-sm italic mb-6">"Excelente profissional. Trocou o padrão de energia da minha loja e ficou impecável."</p>
-                    <div class="font-bold text-xs uppercase tracking-widest text-slate-500">— Cliente Comercial</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 text-center">
-        <div class="container mx-auto glass-card p-12 relative overflow-hidden">
-            <div class="absolute -top-24 -right-24 w-64 h-64 bg-orange-500 opacity-10 rounded-full blur-[100px]"></div>
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">Precisa de ajuda agora?</h2>
-            <p class="text-slate-400 mb-10 max-w-lg mx-auto">Não perca tempo com amadores. Fale direto comigo e tenha a solução que você precisa com segurança.</p>
-            <a href="https://wa.me/556799332264" class="personal-badge text-white px-10 py-5 rounded-2xl font-bold text-xl inline-flex items-center gap-3">
-                <i class="fab fa-whatsapp"></i> Conversar com o Técnico
+    <section class="py-24 section-divider bg-[#0c0c0c] text-center">
+        <div class="container-frame">
+            <h2 class="text-3xl font-bold mb-6">Problema elétrico ou portão parado?</h2>
+            <p class="text-zinc-500 mb-10 max-w-md mx-auto">Mande uma mensagem agora. Explique o que aconteceu e eu te passo uma previsão de atendimento.</p>
+            <a href="https://wa.me/556799332264" class="btn-direct">
+                Enviar Mensagem Agora
             </a>
+            <p class="mt-6 text-xs text-zinc-600">Atendimento em toda Campo Grande e região.</p>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-white/5 px-6 text-center text-slate-500 text-sm">
-        <p>&copy; 2026 EletroBoss - Campo Grande/MS. Todos os direitos reservados.</p>
+    <footer class="py-12 border-t border-[#2a2a2a] text-center text-zinc-700 text-[10px] font-bold uppercase tracking-[0.3em]">
+        EletroBoss &copy; 2026 | Soluções Técnicas com Responsabilidade
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-    </script>
 </body>
 </html>
