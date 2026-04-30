@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>EletroBoss | Eletricista Emergencial 24h</title>
+    <title>EletroBoss | Eletricista Emergencial 24h e Portões</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,140 +12,125 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
         
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0a0a0a; color: #f8fafc; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #0a0a0a; 
+            color: #f8fafc; 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden; 
+        }
 
         .glass-dark { 
-            background: rgba(10, 10, 10, 0.8); 
+            background: rgba(10, 10, 10, 0.85); 
             backdrop-filter: blur(12px); 
-            border-bottom: 1px solid rgba(255, 215, 0, 0.1); 
+            border-bottom: 1px solid rgba(255, 215, 0, 0.15); 
         }
         
         .btn-action {
             background: linear-gradient(135deg, #facc15, #eab308);
-            box-shadow: 0 4px 15px rgba(234, 179, 8, 0.2);
+            box-shadow: 0 4px 15px rgba(234, 179, 8, 0.25);
             color: #000 !important;
             transition: all 0.3s ease;
         }
-        .btn-action:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(234, 179, 8, 0.4); }
-
-        .card-pro {
-            background: rgba(23, 23, 23, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-bottom: 4px solid #eab308;
-            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-pro:hover { border-color: #facc15; background: rgba(30, 30, 30, 0.9); }
+        .btn-action:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(234, 179, 8, 0.5); }
 
         .text-gradient {
             background: linear-gradient(to right, #fff, #94a3b8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        
+        /* Ajuste do cabeçalho */
+        header .container {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            header .container {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem; /* Aumentado de gap-2 para gap-6 */
+        }
+        .logo-text {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <header class="fixed w-full z-50 glass-dark py-3 px-6 md:px-12 flex justify-between items-center">
-        <div class="text-xl md:text-2xl font-extrabold tracking-tighter flex items-center gap-2">
-            <i class="fas fa-bolt text-yellow-500"></i>
-            <span>ELETRO<span class="text-yellow-500">BOSS</span></span>
+    <header class="fixed w-full z-50 glass-dark py-4 px-6 md:px-12">
+        <div class="flex justify-between items-center header-logo">
+            <div class="logo-text text-xl md:text-2xl font-extrabold tracking-tighter">
+                <i class="fas fa-bolt text-yellow-500 text-lg md:text-xl"></i>
+                <span class="flex items-center">ELETRO<span class="text-yellow-500">BOSS</span></span>
+            </div>
+            
+            <a href="https://wa.me/5567993322643" class="btn-action text-white px-5 py-2.5 rounded-full font-bold text-[11px] md:text-xs no-break uppercase tracking-widest">
+                EMERGÊNCIA 24H
+            </a>
         </div>
-        
-        <a href="https://wa.me/seunumeroaqui" class="btn-action px-6 py-2.5 rounded-full font-bold text-[11px] md:text-xs uppercase tracking-widest">
-            EMERGÊNCIA 24H
-        </a>
     </header>
 
-    <section class="relative pt-32 pb-16 px-6 overflow-hidden min-h-[90vh] flex items-center">
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden min-h-[90vh] flex items-center">
         <div class="max-w-7xl mx-auto w-full">
-            <div data-aos="fade-up">
-                <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/20 py-1.5 px-4 rounded-full mb-6">
-                    <span class="text-yellow-500 text-[10px] font-bold uppercase tracking-[0.2em] animate-pulse">● Atendimento Imediato</span>
-                </div>
-                
-                <h1 class="text-[42px] md:text-8xl font-extrabold leading-[1] mb-6 tracking-tight">
-                    Faltou luz ou o <br><span class="text-yellow-500">portão parou?</span>
-                </h1>
-                
-                <p class="text-slate-400 text-base md:text-xl mb-8 max-w-2xl leading-relaxed">
-                    Resolução de panes elétricas, curto-circuitos e manutenção de motores de portão. O <strong>EletroBoss</strong> chega rápido para você não ficar no escuro nem do lado de fora.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contato" class="btn-action py-4 px-10 rounded-2xl font-black text-center text-lg">
-                        SOLICITAR TÉCNICO AGORA
-                    </a>
-                    <div class="flex items-center gap-3 px-4 py-2 border border-white/5 rounded-2xl bg-white/5">
-                        <div class="flex -space-x-2">
-                            <div class="w-8 h-8 rounded-full bg-slate-800 border-2 border-black flex items-center justify-center text-[10px]">⭐</div>
-                            <div class="w-8 h-8 rounded-full bg-slate-800 border-2 border-black flex items-center justify-center text-[10px]">⭐</div>
-                            <div class="w-8 h-8 rounded-full bg-slate-800 border-2 border-black flex items-center justify-center text-[10px]">⭐</div>
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7" data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/20 py-1.5 px-4 rounded-full mb-6">
+                        <span class="text-yellow-500 text-[10px] font-bold uppercase tracking-[0.2em] animate-pulse">● Atendimento Imediato</span>
+                    </div>
+                    
+                    <h1 class="text-[36px] md:text-7xl font-extrabold leading-[1] mb-6 tracking-tight">
+                        Faltou luz ou o <br><span class="text-yellow-500">portão parou?</span>
+                    </h1>
+                    
+                    <p class="text-slate-400 text-sm md:text-xl mb-10 max-w-2xl leading-relaxed">
+                        Resolução de panes elétricas, curto-circuitos e manutenção de motores de portão. O <strong>EletroBoss</strong> chega rápido para você não ficar no escuro nem do lado de fora.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-5">
+                        <a href="https://wa.me/5567993322643" class="btn-action py-5 px-12 rounded-2xl font-black text-center text-lg md:text-xl">
+                            SOLICITAR TÉCNICO AGORA
+                        </a>
+                        
+                        <div class="flex items-center gap-4 px-6 py-3 border border-white/5 rounded-2xl bg-black shadow-inner shadow-white/5">
+                            <div class="flex items-center gap-1.5 text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-xs text-slate-400 font-medium whitespace-nowrap">+500 Atendimentos este mês</span>
                         </div>
-                        <span class="text-xs text-slate-400 font-medium">+500 Atendimentos este mês</span>
                     </div>
                 </div>
+                
+                <div class="md:col-span-5 relative" data-aos="fade-left" data-aos-delay="200">
+                    <div class="relative w-full aspect-square md:aspect-auto md:h-[500px] overflow-hidden rounded-[2.5rem] border border-white/5 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1610411738739-1637c3558872?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Eletricista EletroBoss no trabalho" 
+                             class="w-full h-full object-cover object-center transform transition-transform hover:scale-105 duration-700">
+                    </div>
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-yellow-500/10 rounded-full blur-[80px] z-0"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-yellow-500/10 rounded-full blur-[80px] z-0"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="card-pro p-8 rounded-3xl" data-aos="fade-up">
-                <div class="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-6">
-                    <i class="fas fa-plug-circle-bolt text-yellow-500 text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 uppercase">Pane Elétrica</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Identificação rápida de curto-circuitos e restauração imediata de energia residencial ou comercial.</p>
-            </div>
-
-            <div class="card-pro p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-6">
-                    <i class="fas fa-gears text-yellow-500 text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 uppercase">Manutenção de Portão</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Conserto de motores, troca de capacitores, placas e configuração de controles de todas as marcas.</p>
-            </div>
-
-            <div class="card-pro p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-6">
-                    <i class="fas fa-clock text-yellow-500 text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 uppercase">Plantão 24 Horas</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Equipe pronta para emergências a qualquer hora do dia ou da noite, inclusive finais de semana e feriados.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato" class="py-20 px-6 bg-gradient-to-b from-transparent to-yellow-500/5">
-        <div class="max-w-xl mx-auto bg-neutral-900/50 p-10 rounded-[2.5rem] border border-white/5 shadow-2xl backdrop-blur-sm">
-            <h2 class="text-3xl font-black mb-2 text-center">Fale com o <span class="text-yellow-500 text-gradient">Boss</span></h2>
-            <p class="text-slate-500 text-center text-sm mb-8">Preencha e receba um retorno em até 5 minutos.</p>
-            
-            <form class="space-y-4">
-                <div class="group">
-                    <input type="text" placeholder="Seu Nome completo" class="w-full bg-black border border-white/10 rounded-2xl p-5 text-sm outline-none focus:border-yellow-500 text-white transition-all">
-                </div>
-                <div class="group">
-                    <input type="tel" placeholder="Seu WhatsApp (com DDD)" class="w-full bg-black border border-white/10 rounded-2xl p-5 text-sm outline-none focus:border-yellow-500 text-white transition-all">
-                </div>
-                <div class="group">
-                    <select class="w-full bg-black border border-white/10 rounded-2xl p-5 text-sm outline-none focus:border-yellow-500 text-slate-400 transition-all appearance-none">
-                        <option>Selecione o Problema</option>
-                        <option>Falta de Energia / Curto</option>
-                        <option>Portão Elétrico Travado</option>
-                        <option>Instalação de Chuveiro / Disjuntor</option>
-                        <option>Outros Serviços</option>
-                    </select>
-                </div>
-                <button class="btn-action w-full py-5 rounded-2xl text-black font-black uppercase text-sm tracking-[0.15em] mt-4">
-                    SOLICITAR AGORA
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="py-12 text-center border-t border-white/5">
-        <div class="flex justify-center gap-6 mb-6 text-slate-500">
+    <footer class="py-12 text-center border-t border-white/5 bg-black/30">
+        <div class="flex justify-center gap-8 mb-6 text-slate-500 text-lg">
             <i class="fab fa-instagram hover:text-yellow-500 cursor-pointer transition-colors"></i>
             <i class="fab fa-facebook hover:text-yellow-500 cursor-pointer transition-colors"></i>
             <i class="fab fa-google hover:text-yellow-500 cursor-pointer transition-colors"></i>
@@ -154,7 +139,7 @@
         <p class="text-slate-600 text-[10px] uppercase tracking-tighter">Serviços Elétricos de Alta Performance.</p>
     </footer>
 
-    <a href="https://wa.me/seunumeroaqui" class="fixed bottom-8 right-8 bg-[#25d366] w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_30px_rgba(37,211,102,0.3)] z-50 transition-all hover:scale-110 hover:-rotate-12">
+    <a href="https://wa.me/5567993322643" target="_blank" class="fixed bottom-8 right-8 bg-[#25d366] w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_40px_rgba(37,211,102,0.35)] z-50 transition-all hover:scale-110 hover:-rotate-12">
         <i class="fab fa-whatsapp text-white"></i>
     </a>
 
